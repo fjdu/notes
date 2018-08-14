@@ -1,0 +1,150 @@
+\documentclass{article}
+
+\usepackage{ctex}
+\usepackage[a5paper,top=0.8in,bottom=1in]{geometry}
+
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{hyperref}
+
+\usepackage{setspace}
+\setstretch{1.23}
+
+\usepackage{xcolor}
+\definecolor{myblue}{rgb}{0.172,0.439,0.729}
+
+\usepackage{marginnote}
+\newcommand{\mnote}[1]{\marginnote{\footnotesize\textit{\textcolor{gray}{#1}}}[0ex]}
+\newcommand{\fnote}[1]{\footnote{#1}}
+
+\usepackage{natbib}
+\setlength{\bibsep}{0.0pt}
+\usepackage{astroabrev}
+\bibpunct{(}{)}{;}{a}{}{,}
+
+\usepackage{graphicx}
+\renewcommand{\figurename}{图}
+\newcommand{\reffig}[1]{图~\ref{#1}}
+\newcommand{\refstep}[1]{第~\ref{#1}~步}
+
+\newcommand{\mitem}{$-$~}
+
+\usepackage[inline]{enumitem}
+
+\usepackage{xeCJK}
+\setCJKmainfont[BoldFont=STHeiti, ItalicFont=Kaiti SC Bold]{STSong}
+\setCJKsansfont[BoldFont=STHeiti]{STXihei}
+\setCJKmonofont{STFangsong}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{Georgia}
+\setsansfont[Ligatures=TeX]{Arial}
+
+%\usepackage{titlesec}
+%\titleformat{\section}[block]{\Large}{\chinese{section}、}{1ex}{}
+%\titleformat{\subsection}[block]{\large}{\arabic{subsection}.}{1ex}{}
+%\titleformat{\subsubsection}[block]{}{(\arabic{subsubsection})}{1ex}{}
+
+\newcommand\refeq[1]{(\ref{#1})}
+
+\title{60 米级亚毫米波望远镜 \\ {“宇宙物质与生命起源”工作组} \\ {讨论记录}}
+\author{
+\begin{tabular}{ll}
+\hline
+\multicolumn{2}{c}{工作组成员 (按拼音顺序排列)} \\
+常强 & \url{changqiang@xao.ac.cn} \\
+杜福君 & \url{fjdu@pmo.ac.cn} \\
+李娟 & \url{lijuan@shao.ac.cn} \\
+秦胜利 & \url{qin@ynu.edu.cn} \\
+张泳 & \url{zhangyong5@mail.sysu.edu.cn} \\
+\hline
+\multicolumn{2}{c}{记录人：杜福君} \\
+\hline
+\end{tabular}
+}
+
+\begin{document}
+
+\maketitle
+
+\section{望远镜的初步技术指标}
+
+\subsection{集光面积}
+\begin{equation}
+  S = \frac{\pi}{4} (60\,\text{m})^2 = 2827~\text{m}^2,
+\end{equation}
+与 25 个 ALMA 的 12m 镜相当。
+
+\subsection{工作波段}
+
+\noindent\begin{tabular}{l|l|l|l|l|l|l|l}
+  & 波段 & 频率范围 & 口面 & 大气 & 视场 & $1.22\frac{\lambda}{D}$ & NEFD \\
+  &      & (GHz) & 效率 & 透过 & 直径 ($^\circ$)  & ($''$) & (mJy$\cdot$s$^{1/2}$) \\
+\hline
+1 & 3mm & 75 -- 118 & 0.82         & 0.96 & 1.35 & $17-11$   & 0.30 \\
+2 & 2mm & 120 -- 182 & 0.80        & 0.96 & 1.10 & $10-7$    & 0.25 \\
+3 & 1mm L & 185 -- 260 & 0.76      & 0.94 & 0.91 & $7-5$     & 0.28 \\
+4 & 1mm U & 240 -- 323 & 0.73      & 0.90 & 0.81 & $5-4$     & 0.34 \\
+5 & 850 $\mu$m & 327 -- 373 & 0.68 & 0.80 & 0.71 & $3.8-3.4$ & 0.91 \\
+6 & 650 $\mu$m & 388 -- 496 & 0.60 & 0.64 & 0.64 & $3.2-2.5$ & 1.93
+\end{tabular}
+基于假定 PWV = {1}mm, 俯仰角 = 50$^\circ$，半波前误差 = 30 $\mu$m RMS。
+NEFD: Noise-equivalent flux density;
+NEP: noise-equivalent-power.
+
+
+\subsection{多波束}
+\begin{itemize}
+  \item 连续谱：像元素可到 $10^3$ 的量级
+  \item 谱线观测：可做到\emph{几十}个波束
+\end{itemize}
+
+\subsection{偏振观测}
+能做。具体技术指标需要根据磁场测量和手征超出 (enantiomeric excess) 测量给出的要求来定。
+
+\subsection{指向}
+
+\subsection{台址特性}
+
+\section{本方向的科学目标}
+
+\subsection{星际有机物的广域分布}
+  \begin{itemize}
+    \item 普查不同天体物理环境下的物质组成和物质循环
+    \item 结合化学模型计算，理解这些分子的化学起源
+  \end{itemize}
+\subsection{探测生命前物质}
+  \begin{itemize}
+    \item 生命前物质产生的理化环境
+    \item 生命前物质的聚合
+    \item 手性分子和手征不对称的探测
+    \item 氨基乙腈 (与甘氨酸有关)、乙醇醛 (糖分子)、乙二醇 (与 DNA 和 RNA 有关), \ldots
+  \end{itemize}
+\subsection{探测生命物质}
+  \begin{itemize}
+    \item 氨基酸，例如甘氨酸
+    \item 核糖核酸 (RNA)，脱氧核糖核酸 (DNA)
+  \end{itemize}
+
+\section{任务分解}
+
+\begin{enumerate}
+  \item 给出有可能被探测到的复杂有机分子、生命前分子、生命分子列表，描述探测到它们的意义，通过模拟计算或者推测 (“educated guess”) 给出预期出现的物理环境和丰度，以此为依据给出对望远镜设备的定量需求。\\
+  负责人: \\
+  参与人: \\
+  时限:
+  \item 给出预期可能探测到的手性分子列表和丰度；研究手征不对称性的探测方法，以此为依据给出对望远镜设备的定量需求。我相信很多人对怎么探测手征不对称性不是很清楚 (包括最基本的问题：有没有可能探测到?)，所以值得弄清楚。\\
+  负责人: \\
+  参与人: \\
+  时限:
+  \item 设计从观测数据自动识别分子谱线的算法并编制程序；这是为了应对今后的大规模谱线巡天数据带来的数据处理压力。\\
+  负责人: \\
+  参与人: \\
+  时限:
+  \item 研究有机分子和生命分子从星际介质到宜居行星的演化路径，为解释观测数据提供理论框架。\\
+  负责人: \\
+  参与人: \\
+  时限:
+\end{enumerate}
+
+\end{document}
