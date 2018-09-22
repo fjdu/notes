@@ -1,17 +1,24 @@
-\documentclass{report}
+\documentclass[a4paper]{article}
 
 \usepackage{ctex}
-\usepackage[a5paper,top=0.8in,bottom=1in]{geometry}
+%\usepackage[a5paper,top=0.5in,bottom=0.5in,left=0.2in,right=0.2in]{geometry}
+\usepackage[top=1in,bottom=1in]{geometry}
 
 \usepackage{amssymb}
 \usepackage[version=4]{mhchem}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 
 %\usepackage{setspace}
 %\setstretch{1.23}
 
 \usepackage{xcolor}
 \definecolor{myblue}{rgb}{0.172,0.439,0.729}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
 
 \usepackage{marginnote}
 \newcommand{\mnote}[1]{\marginnote{\footnotesize\textit{\textcolor{gray}{#1}}}[0ex]}
@@ -78,18 +85,24 @@
 \newcommand\sgrb{Sagitarius B2}
 \newcommand\twh{TW Hydrae}
 
-\title{大型亚毫米波观测设备\\%
-项目建议书}
+\title{
+%{\small 大型亚毫米波观测设备项目建议书}\\
+宇宙有机物分布与生命起源}
 \author{}
+\date{}
+%\author{60 米级亚毫米波望远镜“宇宙物质与生命起源”工作组}
 
 \begin{document}
 
 \maketitle
+\newpage
+\tableofcontents
+\newpage
 
-\chapter{宇宙有机物分布与生命起源}
-%\author{60 米级亚毫米波望远镜“宇宙物质与生命起源”工作组}
+\setcounter{section}{-1}
+\section{引言}
 
-%\section{分子天文学的兴起和发展}
+\subsection{用天文方法研究生命起源}
 
 有两个问题由来已久：
 \begin{enumerate*}[label=\arabic*)]
@@ -105,9 +118,20 @@
 
 这些发现提示我们: \begin{enumerate*}[label=\arabic*)]\item 生命物质很可能在宇宙中普遍存在，\item 地球生命的起源可以追溯到星际空间。\end{enumerate*} 如果顺着这样的推理更进一步，那么可以猜测：地球外有可能存在生命甚至智慧生命。探索生命起源和地外生命乃至地外文明有助于认识人类和地球在宇宙中的地位，可以为人类文明的远期发展提供指导。不妨做一个历史的类比：数百年前欧洲人通过大航海发现了新大陆，以此奠定今天的世界格局；由于地球资源有限，未来的人类若要持续发展，前往太空是一个可能性很大的选择，因此对星际空间物质组成的探索至关重要。
 
-大型亚毫米波望远镜可以极大地推动关于星际分子的研究，为认识生命的星际空间起源提供事实依据。我们提议对不同类型的天体，分层次进行观测：通过大规模巡天认识银河系的大尺度有机物分布，通过在星际空间搜寻生命前分子和生命分子为生命在星系尺度上的广域分布提供线索，通过对原行星盘、残盘、以及正在形成过程中的行星系统的观测认识物质从星际介质到行星系统的转移过程，通过对太阳系天体的观测认识太阳系物质的星际起源，最后，还可在宇宙尺度上探索复杂分子的分布。下面给出详述。
+\subsection{干涉仪时代单天线观测的必要性}
 
-\section{银河系宽波段深度巡天}
+大型亚毫米波望远镜可以极大地推动关于星际分子的研究，为认识生命的星际空间起源提供事实依据。我们提议对不同类型的天体，\emph{分层次}进行观测：
+\begin{itemize}
+  \item 通过大规模巡天认识有机物在银河系的分布状况
+  \item 在星际空间搜寻生命前分子和生命分子，为生命在星系尺度上的广域分布提供线索
+  \item 观测原行星盘、残盘、以及正在形成过程中的行星系统，认识物质从星际介质到行星系统的转移过程
+  \item 通过对太阳系天体的观测认识太阳系物质的星际起源
+  \item 在宇宙尺度上探索复杂分子的分布
+\end{itemize}
+下面给出详述。
+
+%\section{银河系宽波段深度巡天}
+\section{普查有机物在银河系内的分布}
 %Wide band deep submillimeter survey of the Milky Way
 %WBDSSMW
 %DSS
@@ -148,7 +172,14 @@
 对整个银河系中远紫外光子驱动复杂有机物形成的情况还很不清楚，需要更加系统全面的 巡天观测加以确定。
 %O、B型年轻恒星发出的极强UV辐射照射到近邻分子云表面，由于尘埃和气体消光，在分子云表面形成从原子离子到内部中性分子的层状化学分布。
 
-\subsection{热分子云核 (hot core, hot corino)}
+XDR, CRDR
+
+\subsection{弥漫星际云}
+
+\subsection{冷暗分子云}
+
+\subsection{热分子云核}
+
 热分子云核是被正在形成的原恒星加热的致密热尘埃气体云的核心部分，通常尺度小于0.01{} pc，温度可达100 K以上。观测表明大质量热云核 (hot cores) 与小质量热云核 (hot corinos) 存在显著差异：后者的尺度、密度、温度都低于前者，但复杂有机分子相对\ce{CH3OH}的丰度比前者高一个量级以上 \citep{Caselli2012}。
 
 热云核中的复杂有机分子的合成与尘埃表面化学反应密切相关。在恒星形成开始之前的冷云核阶段，尘埃颗粒表面的冰层可能就因宇宙射线诱导的FUV光致离解反应已经产生并保存了相当可观的复杂自由基 (如HCO, \ce{CH3O}等)，然后在热云核塌缩升温阶段被蒸发到气相然后反应生成复杂有机分子 (如\ce{H2CO}, \ce{CH3OH}, \ce{HCOOH}, \ce{HCOOCH3}, \ce{CH3OCH3}等)，丰度可达$10^{-9}-10^{-7}$。在此基础上，\citet{Garrod2008}认为云核塌缩升温的时标越长，越有利于形成更多的复杂有机分子，比如含羟基 (OH) 的 \ce{CH3OOH}, \ce{CH2(OH)2}, \ce{HOCOOH}，酰胺类物质 (amide) 的\ce{NH2COOH}和\ce{(NH2)2CO}，以及含氨基 (\ce{NH2}) 的\ce{CH3ONH2}，\ce{CH2OHNH2}, \ce{NH2OH}等。
@@ -159,8 +190,11 @@
 
 这些热分子云核里形成的复杂有机分子到达行星的途径包括：在恒星形成过程中流向星周吸积盘，然后在行星的形成过程中被吸积到行星上，或者凝聚到尘埃表面然后通过彗星、流星、陨石等载体到达行星。这些复杂有机分子会成为行星上生命物质的原材料。热云核里的分子也会被吸积到正在形成的恒星里，或者被恒星的辐射压或星风驱散到星际空间。对各种复杂有机分子的演化路径的研究是一个重要课题。
 
-\subsection{冷暗分子云}
-\subsection{年老恒星周边}
+\subsection{喷流与激波}
+
+\subsection{演化晚期恒星}
+%\subsection{年老恒星周边}
+
 \subsection{超新星遗迹}
 
 \section{搜寻生命前分子和生命分子}
@@ -187,7 +221,8 @@
 
 酯类分子的通式为 \ce{RCOOR$'$}，这里 \ce{R} 和 \ce{R$'$} 代表任何烷基 (\ce{C$_n$H$_{2n+1}$}) 或芳香基，R也可以是一个氢原子。可以看到，甲酸甲酯 (\ce{HCOOCH3}) 是最简单的酯类，复杂度略高的是甲酸乙酯 (ethyl formate) 和乙酸甲酯 (methyl acetate)，含有11个原子，已在星际空间被探测到。更复杂的酯类分子的可探测性尚属未知。
 
-\subsection{核苷酸 (nucleotide)，核苷 (nucleoside)，碱基 (nucleobase)}
+\subsection{核苷酸、核苷、碱基}
+%\subsection{核苷酸 (nucleotide)，核苷 (nucleoside)，碱基 (nucleobase)}
 
 这三者之间的关系是：
 \begin{equation}
@@ -203,7 +238,7 @@
 有五种碱基被称为基元碱基 (primary)：腺嘌呤 (adenine, \ce{C5H5N5}, A), 鸟嘌呤 (guanine, \ce{C5H5N5O}, G), 胞嘧啶 (cytosine, \ce{C4H5N3O}, C), 胸腺嘧啶 (thymine, \ce{C5H6N2O2}, T), 尿嘧啶(uracil, \ce{C4H4N2O2}, U)。它们的功能是作为基因编码的基本单元，A、G、C、T位于DNA中，而A、G、C、U位于RNA中。已经在陨石中发现了多种碱基 \citep{Callahan2011}，所以在星际空间存在碱基分子的可能性是可预期的；较简单的碱基分子 (比如尿嘧啶和胞嘧啶) 也许会被率先探测到。
 % https://en.wikipedia.org/wiki/Nucleobase
 
-\subsection{含磷分子}
+\subsection{含磷分子的探测}
 
 已在星际空间探测到的含磷分子仅有6种 (CP, PN, PO, HCP, CCP, \ce{PH3})；考虑到磷元素对生命的重要性 (三磷酸腺苷、DNA
 、RNA的组成元素之一，也存在于细胞膜中)，有必要对含磷分子增加更多关注。
@@ -218,33 +253,54 @@
 
 \citet{McGuire2016a} 在\sgrb 中探测到了手性分子环氧丙烷 (\ce{CH3CHCH2O}) 的存在，虽然这个观测在原理上还不能探测到手征超出。未来通过高精度、完整偏振状态的测量可以测出手征超出 (如果存在的话)。
 
-\subsection{生命相关分子 (水、氧气、二氧化碳) 的巡测}
+\subsection{生命相关分子的巡测}
+
+生命相关分子指的主要是水、氧气、二氧化碳等与生命的新陈代谢密切相关的分子。
 
 这些分子的谱线会受到地球大气吸收的较大影响，可以通过观测它们的同位素分子作为代替；在宇宙尺度上可以通过红移让这些分子的谱线避开地球大气吸收。
 
 在原行星盘较内的行星形成区域探测这些分子，有助于认识行星宜居性的起源。
 
-\section{探索行星形成早期环境的化学组成}
+\section{测量行星形成早期环境的化学组成}
 
-原行星盘，\twh，近邻行星系统，debris disk
+\subsection{原行星盘}
+
+\twh
+
+\subsection{残盘}
+
+\subsection{近邻行星系统}
+
 
 %\citet{Walsh2016}使用 ALMA 在\twh 里探测到了\ce{CH3OH} ，但实测丰度比模型预期低了两个量级。 \citet{Walsh2014}
 
 \section{探索太阳系物质构成的星际起源}
 
-行星大气、卫星大气、彗星成分
+\subsection{行星和卫星大气}
 
-\section{近邻星系中的有机物分布}
+\subsection{彗星的组成}
+
+\section{探索近邻和遥远星系的物质组成}
 
 迄今已经在河外星系探测到超过60种不同的分子。作为银河系宽波段深度巡天的扩展，可以对银河系附近的星系 (比如大小麦哲伦云、仙女座星系 (M31)、M82等) 进行类似深度的巡天。
 % https://en.wikipedia.org/wiki/List_of_nearest_galaxies
 % http://www.astro.uni-koeln.de/cdms/molecules
 
-\section{遥远星系中的物质组成}
-
 来自遥远星系的光是在宇宙还很年轻的时候发出的，一般认为在那个时期宇宙的金属丰度还很低，因此不会形成复杂的有机分子。但宇宙早期第一代恒星的快速演化也许能形成较多碳、氮、氧等元素，在合适的物理条件下它们也许能形成复杂分子。对它们的探索可以作为望远镜的机遇性课题。
 
-\section{小结：机遇与挑战}
+ALCHEMI
+
+\section{多学科协同}
+
+\subsection{地面实验室的分子合成和谱线数据测量}
+
+\subsection{分子谱线认证和物理参数提取的计算方法}
+
+\subsection{更完备的天体化学理论框架}
+
+\subsection{与古生物学、古地质学、行星科学的关系}
+
+\subsection{大数据存储和分析设备}
 
 \begin{itemize}
   \item
