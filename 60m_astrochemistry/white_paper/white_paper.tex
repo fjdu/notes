@@ -147,7 +147,7 @@
 \begin{itemize}
   \item 频率覆盖范围: 75 GHz -- 260 GHz
   \item 频谱分辨率: 100 kHz (高频段这个值可能会大一些)
-  \item 灵敏度 (噪声水平): 10 mK
+  \item 灵敏度 (噪声水平): 100 mK
   \item 空间分辨率: 7$''$ (@260 GHz) -- 17$''$ (@75 GHz)
   \item 空间覆盖范围: $-10^\circ\le l\le 250^\circ$, $|b|\le5^\circ$
 \end{itemize}  
@@ -158,12 +158,17 @@
   & \left(\text{一天}\right) \times\\
   & \left(\frac{\text{总面积}}{\text{视场面积}}\right)\times \\
   & \left(\frac{\text{频率范围}}{\text{瞬时带宽}}\right)\times \\
-  & \left(\frac{\text{频谱分辨率}}{100\;\text{kHz}}\right)^{-1}\times \\
+  & \left(\frac{\text{速度分辨率}}{0.3\;\text{km}\;\text{s}^{-1}}\right)^{-1}\times \\
+  & \left(\frac{\text{谱线频率}}{100\;\text{GHz}}\right)^{-1}\times \\
   & \left(\frac{1\;\text{mK}}{\text{灵敏度}}\right)^2\times \\
   & \left(\frac{T_\text{sys}}{100\;\text{K}}\right)^2
 \end{split} 
 \end{equation} 
-使用计划中的多波束宽带接收机 (视场1度，带宽16 GHz)，完成这个巡天项目大约需要1年的对源观测时间。初期多波束也许不能一次全部上线，因此可以先对重点区域在部分频段进行巡测。下面依次描述重点关注的天文对象。
+关于视场面积，假定每个波束的面积为\(\Delta \Omega\)，一共\(n\)各波束，总的波束面积为\(\Omega_\text{tot} = n\Delta\Omega\)。对于\(10''\)的波束，假定\(n=100\)，则\(\Omega_\text{tot} = 100\cdot 100\cdot \mathrm{arcsec}^2 = 10^4\cdot \mathrm{arcsec}^2 = \frac{1}{1296}\;\text{deg}^2\)。
+使用计划中的多波束宽带接收机 (100个波束，带宽16 GHz)，完成这个巡天项目大约需要13年的对源观测时间。初期多波束也许不能一次全部上线，因此可以先对重点区域在部分频段进行巡测。下面依次描述重点关注的天文对象。
+
+波束宽度\(\theta_\lambda = 1.22\frac{\lambda}{D} = 12.6''\frac{}{}\)
+
 %\subsection{氢电离区 (\Hii{} region)}
 \subsection{光致离解区} 即远紫外光子主导气体的能量平衡和化学的区域 \citep{Tielens2005} ,简称 PDR，photodissociation region, 也叫光子主导区, photon-dominated region。PDR区是合成星际复杂有机分子的重要场所。尘埃表⾯冰物质中的多环芳香烃 (PAH) 的氢原子可以在紫外辐照下被各种功能基团 (如OH，\ce{CH3}，COOH，\ce{NH2}，\ce{OCH3}，CN，CO 等)取代，形成 太阳系天体所具有的复杂有机物 \citep{Bernstein2002},包括各种氨基酸 \citep{Bernstein2002a}。如果这种机制确实在分布 范围极广的各类PDR区域发挥作用，其产生的复杂有机物的产量和种类可以非常可观，从⽽成为地球生 命起源的重要有机物来源。
 
